@@ -4,6 +4,8 @@ import java.util.Collection;
 
 import org.junit.Test;
 
+import uk.co.theludwigs.domain.MyClass;
+
 import com.google.common.collect.Lists;
 
 import static org.mockito.Mockito.*;

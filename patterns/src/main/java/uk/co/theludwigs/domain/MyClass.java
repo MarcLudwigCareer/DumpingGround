@@ -1,4 +1,4 @@
-package uk.co.theludwigs.actions;
+package uk.co.theludwigs.domain;
 
 public class MyClass {
 
