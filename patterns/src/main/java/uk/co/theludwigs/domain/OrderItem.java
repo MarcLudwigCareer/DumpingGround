@@ -6,8 +6,10 @@ public abstract class OrderItem {
     
     public String getKey() {
         return itemKey;
-    }
-
+    }  
+    
+    public abstract float getPrice();
+    
     protected float getProfitMargin() {
 //        .... getProfitMargin logic goes here ....
     	return 0f;
