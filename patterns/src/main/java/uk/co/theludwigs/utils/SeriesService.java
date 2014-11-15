@@ -3,10 +3,10 @@ package uk.co.theludwigs.utils;
 public class SeriesService {
 
 	public int fibonnaci(int i) {
-		if (i == 2) {
-			return 1;
+		if (i == 1) {
+			return 0;
 		}
-		return 0;
+		return 1;
 	}
 
 }
