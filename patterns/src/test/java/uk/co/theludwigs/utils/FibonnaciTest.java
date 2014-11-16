@@ -19,6 +19,7 @@ public class FibonnaciTest {
 		assertThat(seriesService.fibonnaci(1), is(1));
 		assertThat(seriesService.fibonnaci(2), is(1));
 		assertThat(seriesService.fibonnaci(3), is(2));
+		assertThat(seriesService.fibonnaci(4), is(3));
 	}
 
 }

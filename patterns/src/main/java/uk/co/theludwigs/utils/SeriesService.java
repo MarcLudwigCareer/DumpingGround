@@ -6,10 +6,10 @@ public class SeriesService {
 		if (i == 0) {
 			return 0;
 		}
-		if (i <= 2) {
+		if (i == 1) {
 			return 1;	
 		}
-		return 2;
+		return fibonnaci(i-1) + fibonnaci(i-2);
 	}
 
 }
