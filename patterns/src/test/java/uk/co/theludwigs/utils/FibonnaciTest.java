@@ -15,10 +15,10 @@ public class FibonnaciTest {
 	public void assertFib() {
 		SeriesService seriesService = new SeriesService();
 		
-		assertThat(seriesService.fibonnaci(1), is(0)); 
+		assertThat(seriesService.fibonnaci(0), is(0)); 
+		assertThat(seriesService.fibonnaci(1), is(1));
 		assertThat(seriesService.fibonnaci(2), is(1));
-		assertThat(seriesService.fibonnaci(3), is(1));
-		
+		assertThat(seriesService.fibonnaci(3), is(2));
 	}
 
 }
