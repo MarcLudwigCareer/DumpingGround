@@ -4,14 +4,22 @@ public class Board {
 
 	private final int boardSize;
 	private final int numberOfColumns;
-
-	public Board(final int boardSize, final int numberOfColumns) {
-		this.boardSize = boardSize;
+	private final String[] board;
+	
+	public Board(final int numberOfRows, final int numberOfColumns) {
+		this.boardSize = numberOfRows;
 		this.numberOfColumns = numberOfColumns;
+		this.board = new String[numberOfRows];
 	}
 
-	public int numberOfQueens() {
-		return 1;
+	public String[] numberOfQueens() {
+		iterate(1, 1);
+		return this.board;
+	}
+	
+	public boolean iterate(final int currentColumn, final int currentRow) {
+		this.board[currentColumn-1] = "Q";
+		return false;
 	}
 
 }

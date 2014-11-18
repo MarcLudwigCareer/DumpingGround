@@ -9,13 +9,15 @@ public class BoardTest {
 	
 	@Test
 	public void testBoardSizes() {
-		assertNumberOfQueens(1,1,1);
+		assertQueenPositions(1,1,new String[] {"Q"});
+//		assertNumberOfQueens(2, 2, 1);
+//		assertNumberOfQueens(3,2,2);
 //		assertNumberOfQueens(boaBoardSizesrdSize, expected);
 	}
 
-	private void assertNumberOfQueens(final int numberOfColumns, final int numberOfRows, final int expectedNumberOfQueens) {
+	private void assertQueenPositions(final int numberOfColumns, final int numberOfRows, final String[] strings) {
 		final Board board = new Board(numberOfColumns, numberOfColumns);
-		assertThat(board.numberOfQueens(), is(expectedNumberOfQueens));
+		assertThat(board.numberOfQueens(), is(strings));
 	}
 
 }
