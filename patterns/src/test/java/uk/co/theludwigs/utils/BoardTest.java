@@ -8,13 +8,13 @@ import static org.hamcrest.Matchers.*;
 public class BoardTest {
 	
 	@Test
-	public void testSingleSquareShouldAlloZeroQueens() {
-		assertNumberOfQueens(1,0);
-//		assertNumberOfQueens(1, boardSize, expected);
+	public void testBoardSizes() {
+		assertNumberOfQueens(1,1,1);
+//		assertNumberOfQueens(boaBoardSizesrdSize, expected);
 	}
 
-	private void assertNumberOfQueens(final int boardSize, final int expectedNumberOfQueens) {
-		final Board board = new Board(boardSize);
+	private void assertNumberOfQueens(final int numberOfColumns, final int numberOfRows, final int expectedNumberOfQueens) {
+		final Board board = new Board(numberOfColumns, numberOfColumns);
 		assertThat(board.numberOfQueens(), is(expectedNumberOfQueens));
 	}
 
