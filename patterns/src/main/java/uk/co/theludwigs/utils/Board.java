@@ -1,25 +1,27 @@
 package uk.co.theludwigs.utils;
 
+import java.util.ArrayList;
+
+import com.google.common.collect.Lists;
+
 public class Board {
 
-	private final int boardSize;
+	private final int numberOfRows;
 	private final int numberOfColumns;
-	private final String[] board;
+	private final ArrayList<ArrayList<String>> solutions;
 	
 	public Board(final int numberOfRows, final int numberOfColumns) {
-		this.boardSize = numberOfRows;
+		this.numberOfRows = numberOfRows;
 		this.numberOfColumns = numberOfColumns;
-		this.board = new String[numberOfRows];
+		this.solutions = Lists.newArrayList();
 	}
 
-	public String[] numberOfQueens() {
-		iterate(1, 1);
-		return this.board;
+	public ArrayList<ArrayList<String>> numberOfQueens() {
+		ArrayList<String> board = Lists.newArrayList();
+		board.add("Q");
+		this.solutions.add(board);
+		return this.solutions;
 	}
 	
-	public boolean iterate(final int currentColumn, final int currentRow) {
-		this.board[currentColumn-1] = "Q";
-		return false;
-	}
 
 }
