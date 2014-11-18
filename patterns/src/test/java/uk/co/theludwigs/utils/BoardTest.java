@@ -9,12 +9,13 @@ public class BoardTest {
 	
 	@Test
 	public void testSingleSquareShouldAlloZeroQueens() {
-		assertNumberOfQueens(1,1,0);		
+		assertNumberOfQueens(1,0);
+//		assertNumberOfQueens(1, boardSize, expected);
 	}
 
-	private void assertNumberOfQueens(final int numberOfQueens, final int boardSize, final int expected) {
-		final Board board = new Board(boardSize, numberOfQueens);
-		assertThat(board.numberOfQueens(), is(expected));
+	private void assertNumberOfQueens(final int boardSize, final int expectedNumberOfQueens) {
+		final Board board = new Board(boardSize);
+		assertThat(board.numberOfQueens(), is(expectedNumberOfQueens));
 	}
 
 }
